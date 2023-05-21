@@ -10,3 +10,5 @@ class notes(models.Model):
     content = models.TextField()
     publish_date = models.DateField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+
