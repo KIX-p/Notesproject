@@ -6,6 +6,6 @@ app_name = 'Notesapp'
 
 urlpatterns = [
 
-    path('', views.notes_list.as_view(), name="note_list"),
+
 
 ]
