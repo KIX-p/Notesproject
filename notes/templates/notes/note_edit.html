@@ -1,0 +1,6 @@
+<h1>Edytuj notatkę</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Zapisz</button>
+</form>

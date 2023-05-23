@@ -1,0 +1,9 @@
+{% load static %}
+<head>
+    <link href="{% static "css/notes.css" %}" rel="stylesheet">
+</head>
+<h1>{{ note.title }}</h1>
+<p>{{ note.content }}</p>
+<p>Autor: {{ note.author.username }}</p>
+<p>Data utworzenia: {{ note.created_date }}</p>
+<a href="{% url 'note_list' %}" class="btn">powrot</a>

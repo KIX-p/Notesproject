@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+        <link href="{% static "css/notes.css" %}" rel="stylesheet">
+    </head>
+    <body>
+<h1>Lista notatek</h1>
+<a href="{% url 'note_create' %}" class="btn">Dodaj nową notatkę</a>
+<ul>
+  {% for note in notes %}
+    <li><a href="{% url 'note_detail' pk=note.pk %}">{{ note.title }}</a> <br>
+    <a href="{% url 'note_edit' pk=note.pk %}" class="btn">edytuj</a>
+
+    </li>
+
+  {% empty %}
+    <li>Brak notatek</li>
+  {% endfor %}
+
+</ul>
+</body>
+</html>
